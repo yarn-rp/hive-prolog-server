@@ -109,7 +109,7 @@ possible_moves(Player_id, Type, _, Hexagon, Moves, Status_Code):-
             beetle: beetle_possible_moves(Player_id, Hexagon, Moves, Status_Code),
             grasshopper: grasshopper_possible_moves(Player_id, Hexagon, Moves, Status_Code),
             spider: spider_possible_moves(Player_id, Hexagon, Moves, Status_Code),
-            soldier_ant: soldier_ant_possible_moves(Player_id, Hexagon, Moves, Status_Code),
+            soldier_ant: soldier_ant_possible_moves(Player_id, Hexagon, Moves, Status_Code)
         ]).
 
 switch(X, [Val:Goal|Cases]) :-
