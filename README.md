@@ -8,7 +8,7 @@
 
 ### Problema
 
-El problema a resolver es la implementacion del juego `Hive`, el juego consiste de 22 piezas (11 por cada integrante). El juego termina cuando se consigue "encarcelar" a la `queen_bee` de la colmena.
+El problema a resolver es la implementacion del juego `InsectsOnArena`, el juego consiste de 22 piezas (11 por cada integrante). El juego termina cuando se consigue "encarcelar" a la `queen_bee` de la colmena.
 
 ### Implementacion de la logica del juego
 
@@ -40,7 +40,7 @@ El desarrollo de la AI del juego no ofrece ninguna complejidad. Primero analiza 
 - Lista todas las posibles jugadas legales en el turno
 - Escoge una de manera aleatoria
 
-En fin, tenemos un AI que en teoria pudiera vencer al campeon del mundo en Hive (suck it Google 💪)
+En fin, tenemos un AI que en teoria pudiera vencer al campeon del mundo en InsectsOnArena (suck it Google 💪)
 
 ### API de comunicacion
 

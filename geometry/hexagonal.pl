@@ -54,22 +54,22 @@ adj(H1,H2, L):-
     are_neighbors(H1,H2).
 
 dfs_visit([[Goal|Path]|_],Goal,[Goal|Path],0,_).
-dfs_visit([Path|Queue],Goal,FinalPath,N,Hive) :-
-    extend(Path,NewPaths, Hive),
+dfs_visit([Path|Queue],Goal,FinalPath,N,InsectsOnArena) :-
+    extend(Path,NewPaths, InsectsOnArena),
     append(NewPaths,Queue,NewQueue),
-    dfs_visit(NewQueue,Goal,FinalPath,M,Hive),
+    dfs_visit(NewQueue,Goal,FinalPath,M,InsectsOnArena),
     N is M+1.
 
-extend([Node|Path],NewPaths, Hive) :-
+extend([Node|Path],NewPaths, InsectsOnArena) :-
     findall([NewNode,Node|Path],
-            (adj(Node,NewNode,Hive), 
+            (adj(Node,NewNode,InsectsOnArena), 
             \+ member(NewNode,Path)),
             NewPaths).
 
 
-is_connected(Hex1,Hex2,Hive):-
-    dfs_visit([[Hex1]],Hex2,_,_,Hive),!.
+is_connected(Hex1,Hex2,InsectsOnArena):-
+    dfs_visit([[Hex1]],Hex2,_,_,InsectsOnArena),!.
 
-axial_neighbors_in_hive(Hex,Hive,L):-
+axial_neighbors_in_hive(Hex,InsectsOnArena,L):-
     axial_neighbors(Hex, Neighbors),
-    findall(X,(member(X,Neighbors),member(X,Hive)), L).
+    findall(X,(member(X,Neighbors),member(X,InsectsOnArena)), L).
