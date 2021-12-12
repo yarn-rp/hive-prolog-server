@@ -3,10 +3,12 @@
 :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_json)).
+:- use_module(library(http/http_cors)).
 
 :- use_module("../game").
 :- use_module("./controllers").
 
+:- set_setting(http:cors, [*]).
 
 :- http_handler('/insect/place/available', handlePlacesAvailable, []).
 :- http_handler('/insect/move/available', handleMovesAvailable, []).
@@ -18,27 +20,32 @@
 
 
 handle_request_place_insect(Req) :-
+		cors_enable,
     http_read_json_dict(Req, Query),
     controllers:placeInsect(Query, Res),
     reply_json_dict(Res).
 
 handleMove(Req):-
+		cors_enable,
     http_read_json_dict(Req, Query),
     controllers:moveInsect(Query, Res),
     reply_json_dict(Res).
 
 handlePlacesAvailable(Req) :-
+		cors_enable,
     http_read_json_dict(Req, Query),
     controllers:getPossiblePlacements(Query, Placements),
     Res = Placements,
     reply_json_dict(Res).
 
 handleMovesAvailable(Req):-
+		cors_enable,
     http_read_json_dict(Req, Query),
     controllers:getPossibleMoves(Query, Res),
     reply_json_dict(Res).
 
 handleArena(_):-
+		cors_enable,
     game:current_player(Current_player_id),
     game:player(p1, P1Name, P1MovesCount, P1HasQueenOnArena, P1Type, P1GameOver),
     game:player(p2, P2Name, P2MovesCount, P2HasQueenOnArena, P2Type, P2GameOver),
@@ -77,14 +84,17 @@ handleArena(_):-
     reply_json_dict(Res).
 
 handle_request_queen_surrounded(_):-
+		cors_enable,
     controllers:queenSurrounded(Res),
     reply_json_dict(Res).
 
 handleAiPlay(_):-
+		cors_enable,
     controllers:playAI(Res),
     reply_json_dict(Res).
 
 handleNewGame(Req):-
+		cors_enable,
     http_read_json_dict(Req, Query),
     controllers:newGame(Query, Res),
     reply_json_dict(Res).
@@ -95,4 +105,4 @@ start_server(Port) :-
     http_server(http_dispatch, [port(Port)]).
 
 
-:- initialization(start_server(3031), program).
+:- initialization(start_server(8080), program).
