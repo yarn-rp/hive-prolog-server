@@ -95,4 +95,4 @@ start_server(Port) :-
     http_server(http_dispatch, [port(Port)]).
 
 
-:- initialization(start_server(3031), program).
+:- initialization(start_server(8080), program).
