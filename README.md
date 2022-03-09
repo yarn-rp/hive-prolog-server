@@ -23,7 +23,7 @@ Si todo va bien deberia mostrarse el siguiente mensaje:
 
 Para correr la aplicación, primero clone nuestro [repositorio git](https://github.com/yarn-rp/hive_game_client.git), y luego desde la raíz puede:
 
-1. Montar la web previamente construida. Para ello: `cd build/web && python -m http.server <Puerto>`.
+1. Montar la web previamente construida. Para ello: `cd web-client && python -m http.server <Puerto>`.
 
 2. Instalar Flutter SDK. Levantar la aplicación de cualquiera de las plataformas soportadas por Flutter ejecutando:
 
@@ -78,4 +78,4 @@ Como presentación tenemos una [aplicación desarrollada en flutter](https://git
 ![captura-1](https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png)
 ![captura-2](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true)
 ![captura-3](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true)
-![video-1](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/gif.mp4?raw=true)
+![video-1](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/gif.gif?raw=true)
