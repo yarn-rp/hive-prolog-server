@@ -14,21 +14,21 @@ El proyecto consta de 2 partes, una aplicación backend, donde se maneja toda la
 
 Desde la raíz de este proyecto:
 
-``` bash
+```bash
 swipl  init.pl
 ```
 
 Si todo va bien deberia mostrarse el siguiente mensaje:
-```Started server at http://localhost:8080/```. Por favor, asegúrese de tener libre el puerto 8080 antes de levantar el servidor.
+`Started server at http://localhost:8080/`. Por favor, asegúrese de tener libre el puerto 8080 antes de levantar el servidor.
 
 Para correr la aplicación, primero clone nuestro [repositorio git](https://github.com/yarn-rp/hive_game_client.git), y luego desde la raíz puede:
 
-1. Montar la web previamente construida. Para ello: ``` cd build/web && python -m http.server <Puerto> ```.
+1. Montar la web previamente construida. Para ello: `cd build/web && python -m http.server <Puerto>`.
 
 2. Instalar Flutter SDK. Levantar la aplicación de cualquiera de las plataformas soportadas por Flutter ejecutando:
 
 ```bash
-flutter run -d <deviceId> 
+flutter run -d <deviceId>
 ```
 
 ## Implementación de la lógica del juego
@@ -75,4 +75,8 @@ Para la comunicación con la capa de presentación visual, el frontend se elabor
 
 Como presentación tenemos una [aplicación desarrollada en flutter](https://github.com/yarn-rp/hive_game_client.git), ofrecemos el código de la aplicación, este puede ser compilado para todas las plataformas (iOS, Android, Linux, MacOS, Windows).
 
-[![Esta es una imagen de ejemplo](https://ejemplo.com/imagen.jpg)](./pvsp.png)
+![[https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png]]
+![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true]]
+![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true]]
+![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true]]
+
