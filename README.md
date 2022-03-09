@@ -75,8 +75,7 @@ Para la comunicación con la capa de presentación visual, el frontend se elabor
 
 Como presentación tenemos una [aplicación desarrollada en flutter](https://github.com/yarn-rp/hive_game_client.git), ofrecemos el código de la aplicación, este puede ser compilado para todas las plataformas (iOS, Android, Linux, MacOS, Windows).
 
-![[https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png]]
-![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true]]
-![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true]]
-![[https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true]]
-
+![captura-1](https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png)
+![captura-2](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true)
+![captura-3](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true)
+![video-1](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/gif.mp4?raw=true)
