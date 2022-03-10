@@ -10,7 +10,7 @@ El problema a resolver es la implementación del juego `InsectsOnArena`, el jueg
 
 ## Ejecución del proyecto
 
-El proyecto consta de 2 partes, una aplicación backend, donde se maneja toda la lógica del juego a traves de servicios API REST, y una aplicación frontend multiplataforma escrita en Flutter.
+El proyecto consta de 2 partes, [una aplicación backend](https://github.com/yarn-rp/hive-prolog-server.git), donde se maneja toda la lógica del juego a traves de servicios API REST, y una [aplicación frontend](https://github.com/yarn-rp/hive_game_client.git) multiplataforma escrita en Flutter.
 
 Desde la raíz de este proyecto:
 
@@ -21,11 +21,11 @@ swipl  init.pl
 Si todo va bien deberia mostrarse el siguiente mensaje:
 `Started server at http://localhost:8080/`. Por favor, asegúrese de tener libre el puerto 8080 antes de levantar el servidor.
 
-Para correr la aplicación, primero clone nuestro [repositorio git](https://github.com/yarn-rp/hive_game_client.git), y luego desde la raíz puede:
+Para correr la aplicación:
 
 1. Montar la web previamente construida. Para ello: `cd web-client && python -m http.server <Puerto>`.
 
-2. Instalar Flutter SDK. Levantar la aplicación de cualquiera de las plataformas soportadas por Flutter ejecutando:
+2. Instalar Flutter SDK. Clonar nuestro [repositorio git](https://github.com/yarn-rp/hive_game_client.git). Levantar la aplicación de cualquiera de las plataformas soportadas por Flutter ejecutando:
 
 ```bash
 flutter run -d <deviceId>
@@ -69,13 +69,20 @@ Para la comunicación con la capa de presentación visual, el frontend se elabor
 
 - Routes, aquí se encuentra el mapeo de ruta http a su controlador correspondiente
 - Controllers, son los predicados encargados de obtener la data ya en prolog procedente de las `routes` y ejecutar la lógica de juego correspondiente
-- Server, aquí se levanta el servidor http en el puerto 3000, (NOTA: verifique que no tiene ningún server http levantado en ese puerto)
+- Server, aquí se levanta el servidor http en el puerto 8080, (NOTA: verifique que no tiene ningún server http levantado en ese puerto)
 
 ### Parte visual del proyecto (frontend)
 
 Como presentación tenemos una [aplicación desarrollada en flutter](https://github.com/yarn-rp/hive_game_client.git), ofrecemos el código de la aplicación, este puede ser compilado para todas las plataformas (iOS, Android, Linux, MacOS, Windows).
 
-![captura-1](https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png)
-![captura-2](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true)
-![captura-3](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true)
-![video-1](https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/gif.gif?raw=true)
+<p float="left">
+  <img src="https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/gif.gif?raw=true" alt="Game gif" width="200"/>
+  <img src="https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img2.jpg?raw=true" alt="Home" width="200"/>
+  <img src="https://github.com/yarn-rp/hive-prolog-server/blob/main/doc/img3.png?raw=true" alt="PvsP1" width="200"/>
+  <img src="https://raw.githubusercontent.com/yarn-rp/hive-prolog-server/main/doc/img1.png" alt="PvsP2" width="200"/>
+</p>
+
+### Links de repositorios
+
+1. [Hive game client (Flutter)](https://github.com/yarn-rp/hive_game_client.git)
+2. [Hive game server](https://github.com/yarn-rp/hive-prolog-server.git)
